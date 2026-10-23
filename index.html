@@ -1,0 +1,267 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#064e3b"><title>I-CARE Monitoring System</title>
+<style>
+:root{--g:#064e3b;--g2:#0b6b50;--mint:#e8f5ee;--bg:#f4f7f3;--ink:#17332b;--muted:#687a71;--line:#dce6df;--red:#b83b49}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,Arial,sans-serif}header{background:linear-gradient(120deg,#04392c,#0b7654);color:white;padding:24px 17px 36px;border-radius:0 0 26px 26px}.wrap,main{max-width:1150px;margin:auto}.top{display:flex;justify-content:space-between;gap:12px;align-items:center}.brand{font-weight:850;letter-spacing:.8px}.pill{font-size:11px;border:1px solid #ffffff55;border-radius:999px;padding:6px 10px}h1{font-size:clamp(25px,4vw,38px);line-height:1.1;margin:24px 0 8px}.sub{color:#d9eee4;margin:0}main{margin-top:-17px;padding:0 14px 30px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 5px 18px #123a2010;margin-top:15px}.stat small{display:block;color:var(--muted);font-weight:650}.stat strong{font-size:29px;display:block;margin:5px 0}.hint,.desc{font-size:12px;color:var(--muted)}.head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}h2{margin:0;font-size:18px}.formgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.field label{display:block;font-weight:700;font-size:12px;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd9d0;border-radius:10px;padding:10px;font:inherit;color:var(--ink);background:#fff}.field textarea{min-height:72px;resize:vertical}.span2{grid-column:span 2}.span4{grid-column:span 4}.btn{border:0;border-radius:10px;padding:10px 14px;font:inherit;font-weight:750;cursor:pointer;background:var(--g2);color:white}.btn.light{background:var(--mint);color:var(--g)}.btn.red{background:#ffeded;color:var(--red)}.btn.small{padding:6px 9px;font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.filters{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:10px;margin-bottom:12px}.filters input,.filters select{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:white;font:inherit}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:880px}th,td{padding:10px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--g);color:white;font-size:12px}tbody tr:nth-child(even){background:#f7faf7}.tag{display:inline-block;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:750;white-space:nowrap}.s-belum{background:#fff0d0;color:#815500}.s-proses{background:#e8f0ff;color:#24549a}.s-selesai{background:#dff5e8;color:#17623e}.s-tunda{background:#fce7e9;color:#a52d3b}.empty{text-align:center;color:var(--muted);padding:26px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.step{background:#f5faf6;border:1px solid var(--line);border-radius:12px;padding:12px}.step b{display:block;color:var(--g)}.step span{font-size:12px;color:var(--muted)}.barline{margin:12px 0}.barlabel{display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px}.bar{height:8px;background:#e9efea;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:linear-gradient(90deg,#0b7654,#b5d96e)}.photo-preview{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.photo-preview img{width:100px;height:80px;object-fit:cover;border:1px solid var(--line);border-radius:8px}.photo-note{font-size:11px;color:var(--muted)}.notice{margin-top:12px;background:#fff8e4;border:1px solid #f0dfa9;color:#785816;padding:11px;border-radius:11px;font-size:12px}footer{text-align:center;color:var(--muted);font-size:12px;padding:22px 10px}@media(max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.span4{grid-column:span 2}.filters{grid-template-columns:1fr 1fr}.twocol{grid-template-columns:1fr}}@media(max-width:460px){.formgrid{grid-template-columns:1fr}.span2,.span4{grid-column:span 1}.flow{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.stat strong{font-size:24px}}@media print{body{background:white}header{border-radius:0}.no-print,form,.filters{display:none!important}.card{box-shadow:none;break-inside:avoid}th{position:static}table{min-width:0;font-size:9px}td,th{padding:5px}footer{display:none}}
+
+/* DARK PREMIUM I-CARE THEME */
+:root{
+ --g:#071b16;--g2:#0f9f72;--mint:#12372c;--bg:#07110f;--ink:#e8f4ee;
+ --muted:#91aaa0;--line:#203b32;--red:#ff6474;
+ --panel:#0e1b17;--panel2:#12241e;--gold:#d6b46a;
+}
+body{background:radial-gradient(ellipse at top left,#102b21 0%,#07110f 48%,#050b09 100%);color:var(--ink)}
+header{background:linear-gradient(125deg,#071b16 0%,#0b3b2b 55%,#08734f 100%);border-bottom:1px solid #2c604b;box-shadow:0 14px 45px #0008}
+.brand{letter-spacing:1.5px;color:#f3fff8}
+.pill{background:#ffffff0d;border-color:#6ba88a;color:#d5f5e5}
+h1{letter-spacing:-.8px}
+.sub{color:#b9d7c9}
+.card{background:linear-gradient(145deg,#101f1a,#0b1713);border:1px solid #244238;box-shadow:0 12px 35px #0004}
+.stat{position:relative;overflow:hidden}
+.stat:after{content:"";position:absolute;right:-25px;top:-28px;width:100px;height:100px;border-radius:50%;background:#1aa87912}
+.stat strong{color:#e8fff2}
+h2{color:#effff6}
+.desc,.hint,.photo-note{color:#91aaa0}
+.field input,.field select,.field textarea,.filters input,.filters select{
+ background:#0a1511;color:#e7f5ed;border:1px solid #2a493d;color-scheme:dark
+}
+.field input:focus,.field select:focus,.field textarea:focus,.filters input:focus,.filters select:focus{
+ outline:2px solid #0f9f72;outline-offset:1px;border-color:#0f9f72
+}
+.field input::placeholder,.field textarea::placeholder,.filters input::placeholder{color:#6f897d}
+.btn{background:linear-gradient(135deg,#0f9f72,#087650);color:#f5fff9;box-shadow:0 4px 12px #0003;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.btn.light{background:#142c23;color:#c8f4df;border:1px solid #2b5946;box-shadow:none}
+.btn.red{background:#3a171d;color:#ffb6be;border:1px solid #6d2b36}
+.tag{border:1px solid transparent}
+.s-belum{background:#3a2d15;color:#f3d58b;border-color:#6a5122}
+.s-proses{background:#152d49;color:#a9d1ff;border-color:#294e79}
+.s-selesai{background:#123c2b;color:#9ce8b9;border-color:#286447}
+.s-tunda{background:#421c24;color:#ffadb7;border-color:#73303b}
+.tablewrap{border-color:#254338}
+table{background:#0d1914}
+th{background:#102f24;color:#dff9eb;border-color:#2a4a3d}
+td{border-color:#20392f;color:#d9e9e1}
+tbody tr:nth-child(even){background:#112019}
+tbody tr:hover{background:#172c22}
+.empty{color:#8ca79a}
+.step{background:#102019;border-color:#294538}
+.step b{color:#72ddb0}
+.bar{background:#1b3027}
+.bar span{background:linear-gradient(90deg,#0f9f72,#d6b46a)}
+.notice{background:#302816;border-color:#5d4a20;color:#f0d79b}
+footer{color:#819b8e}
+dialog{background:#0c1914;color:#e8f4ee;border-color:#2a493d!important}
+dialog::backdrop{background:#000b;backdrop-filter:blur(5px)}
+.photo-preview img{border-color:#345548}
+@media(max-width:800px){
+ header{padding:21px 15px 33px}
+ .card{border-radius:15px;padding:15px}
+ .actions .btn{flex:1 1 100%}
+ .stats{gap:8px}
+}
+
+</style>
+<style id="dark-premium-alt">
+:root {
+  --dp-bg: #080b12;
+  --dp-panel: #111827;
+  --dp-panel-2: #172033;
+  --dp-line: rgba(148,163,184,.19);
+  --dp-text: #edf3ff;
+  --dp-muted: #94a3b8;
+  --dp-blue: #38bdf8;
+  --dp-violet: #a78bfa;
+}
+html, body {
+  background: radial-gradient(ellipse at top left, #172554 0%, #0b1020 38%, #070a10 78%) !important;
+  color: var(--dp-text) !important;
+}
+body { background-attachment: fixed !important; }
+header, .header, .app-header, .topbar, nav {
+  background: linear-gradient(135deg, rgba(17,24,39,.97), rgba(12,18,32,.96)) !important;
+  border-color: var(--dp-line) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,.28) !important;
+}
+main, .container, .app-container, .content, .main-content {
+  color: var(--dp-text) !important;
+}
+section, .card, .panel, .stat-card, .dashboard-card, .form-card, .table-container,
+.modal-content, .filter-card, .report-card {
+  background: linear-gradient(145deg, rgba(20,29,47,.96), rgba(13,19,32,.98)) !important;
+  border: 1px solid var(--dp-line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.025) !important;
+  color: var(--dp-text) !important;
+}
+h1, h2, h3, h4, label, th, strong {
+  color: #f1f5ff !important;
+}
+p, small, .muted, .subtitle, .description {
+  color: var(--dp-muted) !important;
+}
+input, select, textarea {
+  background: #0b1220 !important;
+  color: #eef5ff !important;
+  border: 1px solid #334155 !important;
+  border-radius: 10px !important;
+}
+input::placeholder, textarea::placeholder { color: #718096 !important; }
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--dp-blue) !important;
+  box-shadow: 0 0 0 3px rgba(56,189,248,.13) !important;
+}
+button, .btn, a.button {
+  border-radius: 11px !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+}
+button:hover, .btn:hover, a.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(56,189,248,.13) !important;
+}
+button[type="submit"], .btn-primary, .primary, .submit-btn {
+  background: linear-gradient(135deg, #0284c7, #4f46e5) !important;
+  color: white !important;
+  border: 1px solid rgba(125,211,252,.25) !important;
+}
+table { color: var(--dp-text) !important; border-color: var(--dp-line) !important; }
+thead, th { background: #18243a !important; }
+td, th { border-color: var(--dp-line) !important; }
+tr:nth-child(even) td { background: rgba(30,41,59,.28) !important; }
+.badge, .status-badge, .status {
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+}
+hr { border-color: var(--dp-line) !important; }
+footer { color: var(--dp-muted) !important; }
+@media (max-width: 700px) {
+  section, .card, .panel, .stat-card, .dashboard-card, .form-card {
+    border-radius: 15px !important;
+  }
+  button, .btn { min-height: 42px; }
+}
+</style>
+
+
+<style>
+#loginScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;background:radial-gradient(ellipse at 20% 10%,#164b38 0%,#07110f 52%,#040807 100%);color:#effff6}
+.login-card{width:min(100%,420px);border:1px solid #35644e;background:linear-gradient(150deg,#10261dF2,#09140fF7);border-radius:26px;padding:28px 22px;box-shadow:0 24px 70px #0009;text-align:center}
+.login-mark{width:76px;height:76px;margin:0 auto 16px;border-radius:23px;display:grid;place-items:center;background:linear-gradient(145deg,#d8b96c,#8b6a2b);color:#071b12;font-size:30px;font-weight:900;box-shadow:0 10px 28px #d6b46a30}
+.login-kicker{font-size:11px;letter-spacing:2.5px;color:#d6b46a;font-weight:800}.login-card h1{font-size:30px;line-height:1.12;margin:12px 0 10px;color:#f3fff8}.login-card p{font-size:13px;color:#b9d7c9;line-height:1.6}.login-rule{height:1px;background:linear-gradient(90deg,transparent,#39644f,transparent);margin:22px 0}
+.google-login{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:14px 15px;background:#fff;color:#202124;border:0;border-radius:13px;font-weight:750;font-size:15px;cursor:pointer;box-shadow:0 7px 18px #0003}.google-login:disabled{opacity:.65;cursor:wait}.google-g{font-size:20px;font-weight:900;color:#4285f4}.login-foot{font-size:11px!important;color:#7f9c8d!important;margin-top:18px}.login-error{display:none;background:#3d1c22;border:1px solid #7a343f;color:#ffd2d6;border-radius:10px;padding:10px;margin:12px 0;font-size:12px;text-align:left;overflow-wrap:anywhere}
+#appShell[hidden],#loginScreen[hidden]{display:none!important}.auth-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.user-chip{font-size:11px;color:#d4f2e1;max-width:190px;overflow-wrap:anywhere}.signout-btn{background:#18392b!important;border:1px solid #47735c!important;color:#e6fff0!important;box-shadow:none!important}
+@media(max-width:460px){.login-card{padding:25px 18px}.login-card h1{font-size:27px}}
+</style>
+
+</head><body>
+<section id="loginScreen">
+  <div class="login-card">
+    <div class="login-mark">◆</div>
+    <div class="login-kicker">PKS BUNUT · REGIONAL IV</div>
+    <h1>MONITORING<br><span style="color:#79ddb2">I-CARE</span></h1>
+    <p>Identifikasi sumber masalah, tindak lanjut perbaikan, dokumentasi, dan pemeriksaan ulang area produksi.</p>
+    <div class="login-rule"></div>
+    <button id="googleLoginBtn" class="google-login" type="button"><span class="google-g">G</span><span>Masuk dengan Google</span></button>
+    <div id="loginError" class="login-error"></div>
+    <p class="login-foot">Akses khusus pengguna yang diizinkan. Pastikan menggunakan akun Google yang sesuai.</p>
+  </div>
+</section>
+<div id="appShell" hidden>
+<header><div class="wrap"><div class="top"><div class="brand">I-CARE <span style="color:#d6b46a">◆</span> MONITORING SYSTEM</div><div class="auth-tools"><span class="user-chip" id="signedInEmail"></span><button id="signOutBtn" class="btn small signout-btn" type="button">Keluar</button></div></div><div class="pill" style="display:inline-block;margin-top:10px">PKS BUNUT · REGIONAL IV</div><h1>Operational Excellence.<br><span style="color:#79ddb2">Tuntaskan sampai akar.</span></h1><p class="sub">Pencatatan temuan kebersihan, tindak lanjut teknis, dokumentasi, dan pemeriksaan ulang untuk mengurangi masalah berulang.</p></div></header>
+<main><div class="stats"><div class="card stat"><small>Total Temuan</small><strong id="total">0</strong><div class="hint">Semua catatan</div></div><div class="card stat"><small>Belum Dilakukan</small><strong id="belum">0</strong><div class="hint">Menunggu tindak lanjut</div></div><div class="card stat"><small>Dalam Proses</small><strong id="proses">0</strong><div class="hint">Sedang ditangani</div></div><div class="card stat"><small>Selesai</small><strong id="selesai">0</strong><div class="hint">Perlu verifikasi hasil</div></div></div>
+<section class="card"><div class="head"><div><h2>Tambah Temuan / Tindak Lanjut</h2><div class="desc">Catat sumber masalah, bukan hanya area yang kotor.</div></div><span class="tag s-proses">Form I-CARE</span></div>
+<form id="form"><div class="formgrid">
+<div class="field"><label>Tanggal temuan *</label><input id="date" type="date" required></div>
+<div class="field"><label>Area / stasiun *</label><select id="area" required><option value="">Pilih area</option><option>Thresher</option><option>EBH</option><option>Pressan</option><option>Kernel</option><option>Klarifikasi</option><option>Nut Silo</option><option>Bunch Crusher</option><option>Sand Trap Tank</option><option>Auto Feeder</option><option>Conveyor Under Thresher</option><option>Fruit Elevator / COT</option><option>Lainnya</option></select></div>
+<div class="field"><label>Jenis temuan *</label><select id="issue" required><option value="">Pilih jenis</option><option>Kebocoran minyak</option><option>Kebocoran air / steam</option><option>Brondolan berjatuhan</option><option>Fiber / material berjatuhan</option><option>Penumpukan kotoran</option><option>Kerusakan komponen</option><option>Lainnya</option></select></div>
+<div class="field"><label>Urgensi</label><select id="priority"><option>Tinggi</option><option selected>Sedang</option><option>Rendah</option></select></div>
+<div class="field span2"><label>Deskripsi masalah / sumber kotoran *</label><textarea id="problem" placeholder="Contoh: material berjatuhan dari sambungan conveyor..." required></textarea></div>
+<div class="field span2"><label>Tindakan yang diperlukan</label><textarea id="action" placeholder="Contoh: inspeksi sumber, perbaiki sambungan, lalu bersihkan area."></textarea></div>
+<div class="field"><label>PIC / koordinator</label><input id="owner" placeholder="Nama PIC"></div>
+<div class="field"><label>Tim terkait</label><select id="team"><option>Satgas I-CARE</option><option>Tim Teknik</option><option>Tim Pengolahan</option><option>Tim Kebersihan</option><option>Teknik + Pengolahan</option><option>Satgas + Teknik + Pengolahan</option></select></div>
+<div class="field"><label>Target penyelesaian</label><input id="due" type="date"></div>
+<div class="field"><label>Status pekerjaan</label><select id="status"><option>Belum dilakukan</option><option>Dalam proses</option><option>Selesai</option><option>Tertunda</option></select></div>
+<div class="field span2"><label>Hasil / catatan pemeriksaan ulang</label><textarea id="result" placeholder="Apakah sumber masalah sudah berhenti? Apakah masalah masih berulang?"></textarea></div>
+<div class="field span2"><label>Foto sebelum perbaikan (opsional)</label><input id="photoBefore" type="file" accept="image/*" capture="environment"><small class="desc">Pilih foto dari galeri atau kamera HP.</small><div id="beforePreview"></div></div>
+<div class="field span2"><label>Foto sesudah perbaikan (opsional)</label><input id="photoAfter" type="file" accept="image/*" capture="environment"><small class="desc">Foto hasil setelah tindakan dilakukan.</small><div id="afterPreview"></div></div>
+<div class="field span4"><label>Catatan dokumentasi / tautan tambahan (opsional)</label><input id="evidence" placeholder="Catatan atau tautan dokumentasi tambahan"></div>
+</div><div class="actions"><button class="btn" id="submitBtn" type="submit">+ Simpan Temuan</button><button class="btn light" id="resetBtn" type="button">Kosongkan Form</button><button class="btn light" id="driveBeforeBtn" type="button">📷 Upload Foto Sebelum ke Drive</button><button class="btn light" id="driveAfterBtn" type="button">📷 Upload Foto Sesudah ke Drive</button><button class="btn light" id="driveOpenBtn" type="button">Buka Folder Dokumentasi</button></div><input type="hidden" id="editId"></form>
+<div class="notice">Alur: identifikasi sumber masalah → koordinasi teknik/pengolahan → perbaikan sumber → pembersihan area → pemeriksaan ulang.</div></section>
+<section class="card"><div class="head"><div><h2>Daftar Temuan</h2><div class="desc" id="count">0 catatan</div></div><div class="actions no-print" style="margin:0"><button class="btn light" id="csvBtn">Ekspor CSV</button><button class="btn light" id="driveListBtn">Buka Google Drive</button><button class="btn light" onclick="window.print()">Cetak / PDF</button></div></div>
+<div class="filters no-print"><input id="search" placeholder="Cari area, masalah, PIC..."><select id="filterStatus"><option value="">Semua status</option><option>Belum dilakukan</option><option>Dalam proses</option><option>Selesai</option><option>Tertunda</option></select><select id="filterArea"><option value="">Semua area</option></select><select id="filterPriority"><option value="">Semua urgensi</option><option>Tinggi</option><option>Sedang</option><option>Rendah</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>Tanggal / Area</th><th>Temuan & Sumber Masalah</th><th>Urgensi</th><th>PIC / Tim</th><th>Status</th><th>Target</th><th>Hasil pemeriksaan ulang</th><th class="no-print">Aksi</th></tr></thead><tbody id="rows"></tbody></table><div class="empty" id="empty">Belum ada temuan. Isi formulir di atas untuk memulai.</div></div></section>
+<div class="twocol"><section class="card"><h2>Ringkasan Status</h2><div class="desc">Jumlah tindak lanjut berdasarkan status.</div><div id="statusBars"></div></section><section class="card"><h2>Prinsip Pelaksanaan I-CARE</h2><div class="desc">Fokus pada sumber masalah dan pencegahan berulang.</div><div class="flow"><div class="step"><b>01 · Identifikasi</b><span>Catat lokasi, sumber kotoran, urgensi, dan dampak.</span></div><div class="step"><b>02 · Tindak lanjut</b><span>Koordinasi dengan teknik/pengolahan sesuai kebutuhan.</span></div><div class="step"><b>03 · Verifikasi</b><span>Periksa hasil perbaikan dan apakah masalah berulang.</span></div></div></section></div>
+<dialog id="photoDialog" style="max-width:900px;width:94%;border:1px solid var(--line);border-radius:16px"><div class="head"><h2>Dokumentasi Foto</h2><button class="btn light" id="closePhotos">Tutup</button></div><div id="photoGallery" class="flow"></div></dialog>
+<footer>Login Google sudah terhubung, tetapi catatan dan foto pada versi ini masih tersimpan di browser/perangkat ini. Login tidak otomatis menyinkronkan data lintas perangkat. Tombol Google Drive membuka folder dokumentasi untuk upload manual.</footer></main>
+</div><!-- /appShell -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script>
+// Firebase Authentication: Google login for Satgas I-CARE
+const firebaseConfig = {
+  apiKey: "AIzaSyDLF1fNIypKHS_Fdt1KYZL_G8elc8PBDX8",
+  authDomain: "satgas-i-care.firebaseapp.com",
+  projectId: "satgas-i-care",
+  storageBucket: "satgas-i-care.firebasestorage.app",
+  messagingSenderId: "103992852952",
+  appId: "1:103992852952:web:89a99b207abf3ea5ce72ad",
+  measurementId: "G-5M7BC8FCVM"
+};
+let icareAuth=null;
+try { if (!firebase.apps.length) firebase.initializeApp(firebaseConfig); icareAuth=firebase.auth(); icareAuth.useDeviceLanguage(); } catch(err) { console.error(err); }
+const loginScreen=document.getElementById("loginScreen"), appShell=document.getElementById("appShell"), loginError=document.getElementById("loginError"), googleLoginBtn=document.getElementById("googleLoginBtn");
+function showLoginError(message){loginError.textContent=message;loginError.style.display="block";}
+googleLoginBtn.addEventListener("click",async()=>{
+  loginError.style.display="none";
+  if(!icareAuth){showLoginError("Firebase belum berhasil dimuat. Periksa koneksi internet lalu muat ulang halaman.");return;}
+  googleLoginBtn.disabled=true;googleLoginBtn.querySelector("span:last-child").textContent="Membuka login Google…";
+  try { const provider=new firebase.auth.GoogleAuthProvider(); provider.setCustomParameters({prompt:"select_account"}); await icareAuth.signInWithRedirect(provider); }
+  catch(err){console.error(err);showLoginError("Login gagal: "+(err.message||"Periksa pengaturan Firebase Authentication."));googleLoginBtn.disabled=false;googleLoginBtn.querySelector("span:last-child").textContent="Masuk dengan Google";}
+});
+const signOutBtn=document.getElementById("signOutBtn");
+signOutBtn.addEventListener("click",async()=>{if(icareAuth){try{await icareAuth.signOut();}catch(e){alert("Tidak berhasil keluar. Coba lagi.");}}});
+if(icareAuth){icareAuth.onAuthStateChanged(user=>{if(user){loginScreen.hidden=true;appShell.hidden=false;document.getElementById("signedInEmail").textContent=user.displayName||user.email||"Akun masuk";}else{appShell.hidden=true;loginScreen.hidden=false;googleLoginBtn.disabled=false;googleLoginBtn.querySelector("span:last-child").textContent="Masuk dengan Google";}});} else {showLoginError("Firebase belum siap. Buka aplikasi dengan koneksi internet.");}
+</script>
+<script>
+const $=id=>document.getElementById(id),KEY='icare_monitoring_pks_bunut_v1',DB='icare_photos_db',STORE='photos';let items=[],seq=1,editPhotos={before:null,after:null};const today=()=>new Date().toISOString().slice(0,10);
+function openPhotoDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+async function putPhoto(id,blob){const db=await openPhotoDB();return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put(blob,id);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)})}
+async function getPhoto(id){if(!id)return null;try{const db=await openPhotoDB();return await new Promise((resolve,reject)=>{const r=db.transaction(STORE,'readonly').objectStore(STORE).get(id);r.onsuccess=()=>resolve(r.result||null);r.onerror=()=>reject(r.error)})}catch(e){return null}}
+async function delPhoto(id){if(!id)return;try{const db=await openPhotoDB();db.transaction(STORE,'readwrite').objectStore(STORE).delete(id)}catch(e){}}
+function compressPhoto(file){return new Promise((resolve,reject)=>{if(!file)return resolve(null);if(!file.type.startsWith('image/'))return reject(new Error('Pilih file gambar.'));const reader=new FileReader();reader.onerror=()=>reject(reader.error);reader.onload=()=>{const img=new Image();img.onerror=()=>reject(new Error('Foto tidak dapat dibaca.'));img.onload=()=>{const max=1200,scale=Math.min(1,max/Math.max(img.width,img.height)),canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);canvas.toBlob(blob=>resolve(blob),'image/jpeg',.78)};img.src=reader.result};reader.readAsDataURL(file)})}
+async function previewPhoto(inputId,previewId,kind){const file=$(inputId).files[0],box=$(previewId);if(!file){editPhotos[kind]=null;box.innerHTML='';return}try{editPhotos[kind]=await compressPhoto(file);const url=URL.createObjectURL(editPhotos[kind]);box.innerHTML='<div class="photo-preview"><img src="'+url+'" alt="Pratinjau foto"><span class="photo-note">Foto siap disimpan (dikompresi agar lebih ringan).</span></div>'}catch(e){alert(e.message||'Gagal membaca foto');$(inputId).value=''}}
+
+function load(){try{let a=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(a)){items=a;seq=Math.max(0,...a.map(x=>+x.id||0))+1}}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(items))}catch(e){alert('Penyimpanan browser penuh. Ekspor CSV sebagai cadangan.')}}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function df(s){return s?s.split('-').reverse().join('/'):'—'}function sc(s){return s==='Selesai'?'s-selesai':s==='Dalam proses'?'s-proses':s==='Tertunda'?'s-tunda':'s-belum'}
+function reset(){ $('form').reset();$('date').value=today();$('editId').value='';$('submitBtn').textContent='+ Simpan Temuan';editPhotos={before:null,after:null};$('beforePreview').innerHTML='';$('afterPreview').innerHTML='';}
+function render(){let c={'Belum dilakukan':0,'Dalam proses':0,'Selesai':0,'Tertunda':0};items.forEach(x=>c[x.status]=(c[x.status]||0)+1);$('total').textContent=items.length;$('belum').textContent=c['Belum dilakukan'];$('proses').textContent=c['Dalam proses'];$('selesai').textContent=c['Selesai'];
+let areas=[...new Set(items.map(x=>x.area).filter(Boolean))].sort(),old=$('filterArea').value;$('filterArea').innerHTML='<option value="">Semua area</option>'+areas.map(a=>`<option>${esc(a)}</option>`).join('');if(areas.includes(old))$('filterArea').value=old;
+let q=$('search').value.toLowerCase(),fs=$('filterStatus').value,fa=$('filterArea').value,fp=$('filterPriority').value;let list=items.filter(x=>(!q||[x.area,x.issue,x.problem,x.action,x.owner,x.team,x.result].join(' ').toLowerCase().includes(q))&&(!fs||x.status===fs)&&(!fa||x.area===fa)&&(!fp||x.priority===fp)).sort((a,b)=>(b.date||'').localeCompare(a.date||''));$('count').textContent=`Menampilkan ${list.length} dari ${items.length} catatan`;$('rows').innerHTML='';
+list.forEach(x=>{let tr=document.createElement('tr');tr.innerHTML=`<td><b>${esc(df(x.date))}</b><br><span class="tag">${esc(x.area)}</span></td><td><b>${esc(x.issue)}</b><br>${esc(x.problem)}${x.action?'<br><small><b>Tindakan:</b> '+esc(x.action)+'</small>':''}${x.evidence?'<br><small>Catatan: '+esc(x.evidence)+'</small>':''}${(x.photoBefore||x.photoAfter)?'<br><button class="btn light small" data-photos="${x.id}">Lihat Foto</button>':''}</td><td>${esc(x.priority)}</td><td>${esc(x.owner||'—')}<br><small>${esc(x.team)}</small></td><td><span class="tag ${sc(x.status)}">${esc(x.status)}</span></td><td>${esc(df(x.due))}</td><td>${esc(x.result||'Belum dicatat')}</td><td class="no-print"><button class="btn light small" data-edit="${x.id}">Edit</button> <button class="btn red small" data-del="${x.id}">Hapus</button></td>`;$('rows').appendChild(tr)});$('empty').style.display=list.length?'none':'block';$('statusBars').innerHTML=Object.keys(c).map(s=>`<div class="barline"><div class="barlabel"><span>${s}</span><b>${c[s]}</b></div><div class="bar"><span style="width:${items.length?c[s]/items.length*100:0}%"></span></div></div>`).join('');save()}
+$('form').addEventListener('submit',async e=>{e.preventDefault();let id=$('editId').value,old=id?items.find(y=>y.id===+id):null,newId=id?+id:seq++;let beforeId=old?.photoBefore||null,afterId=old?.photoAfter||null;try{if(editPhotos.before){beforeId='icare-'+newId+'-before';await putPhoto(beforeId,editPhotos.before)}if(editPhotos.after){afterId='icare-'+newId+'-after';await putPhoto(afterId,editPhotos.after)}}catch(err){alert('Foto tidak berhasil disimpan. Coba pilih foto yang lebih kecil atau periksa dukungan browser.');return}let x={id:newId,date:$('date').value,area:$('area').value,issue:$('issue').value,priority:$('priority').value,problem:$('problem').value.trim(),action:$('action').value.trim(),owner:$('owner').value.trim(),team:$('team').value,due:$('due').value,status:$('status').value,result:$('result').value.trim(),evidence:$('evidence').value.trim(),photoBefore:beforeId,photoAfter:afterId};items=id?items.map(y=>y.id===+id?x:y):[...items,x];reset();render()});$('resetBtn').onclick=reset;
+$('photoBefore').addEventListener('change',()=>previewPhoto('photoBefore','beforePreview','before'));$('photoAfter').addEventListener('change',()=>previewPhoto('photoAfter','afterPreview','after'));
+['search','filterStatus','filterArea','filterPriority'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));
+$('rows').addEventListener('click',async e=>{let pb=e.target.closest('[data-photos]');if(pb){let x=items.find(y=>y.id===+pb.dataset.photos);let gallery=$('photoGallery');gallery.innerHTML='';for(const [label,key] of [['Sebelum perbaikan','photoBefore'],['Sesudah perbaikan','photoAfter']]){if(x[key]){let blob=await getPhoto(x[key]);if(blob){let url=URL.createObjectURL(blob),div=document.createElement('div');div.className='step';div.innerHTML='<b>'+label+'</b><br><img style="width:100%;max-height:55vh;object-fit:contain;margin-top:8px" src="'+url+'">';gallery.appendChild(div)}}}if(!gallery.children.length)gallery.textContent='Foto tidak ditemukan di penyimpanan perangkat.';$('photoDialog').showModal();return}let eb=e.target.closest('[data-edit]'),db=e.target.closest('[data-del]');if(eb){let x=items.find(y=>y.id===+eb.dataset.edit);Object.keys(x).forEach(k=>{if($(k))$(k).value=x[k]??''});$('editId').value=x.id;editPhotos={before:null,after:null};$('beforePreview').innerHTML=x.photoBefore?'<div class="photo-note">Foto sebelum sudah tersimpan. Pilih foto baru untuk mengganti.</div>':'';$('afterPreview').innerHTML=x.photoAfter?'<div class="photo-note">Foto sesudah sudah tersimpan. Pilih foto baru untuk mengganti.</div>':'';$('submitBtn').textContent='Simpan Perubahan';window.scrollTo({top:250,behavior:'smooth'})}if(db){let x=items.find(y=>y.id===+db.dataset.del);if(x&&confirm('Hapus temuan area '+x.area+'?')){items=items.filter(y=>y.id!==x.id);delPhoto(x.photoBefore);delPhoto(x.photoAfter);render()}}});
+$('csvBtn').onclick=()=>{let keys=['id','date','area','issue','priority','problem','action','owner','team','due','status','result','evidence','photoBefore','photoAfter'],head=['ID','Tanggal','Area','Jenis Temuan','Urgensi','Deskripsi Masalah','Tindakan','PIC','Tim Terkait','Target','Status','Hasil Pemeriksaan Ulang','Catatan Dokumentasi','ID Foto Sebelum','ID Foto Sesudah'];let data=[head,...items.map(x=>keys.map(k=>x[k]??''))];let csv=data.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'}));a.download='icare-monitoring-pks-bunut.csv';a.click();URL.revokeObjectURL(a.href)};
+
+const DRIVE_FOLDER_URL = 'https://drive.google.com/drive/folders/1-PhLD3_5ex9yiW6ziXsY7fFcRWPlqEgm';
+function openDriveFolder(){window.open(DRIVE_FOLDER_URL,'_blank','noopener');}
+function openDriveUpload(phase){
+  const x = {
+    date: $('date').value || today(),
+    area: $('area').value || 'Area-belum-dipilih',
+    issue: $('issue').value || 'Temuan',
+    phase: phase
+  };
+  const folderName = 'ICARE_' + x.date + '_' + x.area.replace(/[^a-zA-Z0-9_-]+/g,'_') + '_' + phase;
+  alert('Google Drive akan dibuka. Pilih Upload (+), lalu unggah foto.\n\nSaran nama file: ' + folderName + '\n\nSetelah upload, kembali ke aplikasi I-CARE untuk melanjutkan formulir.');
+  openDriveFolder();
+}
+$('driveBeforeBtn').onclick=()=>openDriveUpload('SEBELUM');
+$('driveAfterBtn').onclick=()=>openDriveUpload('SESUDAH');
+$('driveOpenBtn').onclick=openDriveFolder;
+$('driveListBtn').onclick=openDriveFolder;
+
+$('closePhotos').onclick=()=>$('photoDialog').close();$('date').value=today();load();render();
+</script></body></html>
